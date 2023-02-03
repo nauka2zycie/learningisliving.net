@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Learning is Living</title>
-    <link>https://livingislearning.net/tags/</link>
+    <link>https://learningisliving.net/tags/</link>
     <description>Recent content in Tags on Learning is Living</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Oct 2022 20:00:00 +0200</lastBuildDate><atom:link href="https://livingislearning.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 20:00:00 +0200</lastBuildDate><atom:link href="https://learningisliving.net/tags/index.xml" rel="self" type="application/rss+xml" />
   
     <item>
       <title>machine learning</title>
-      <link>https://livingislearning.net/tags/machine-learning/</link>
+      <link>https://learningisliving.net/tags/machine-learning/</link>
       <pubDate>Thu, 06 Oct 2022 20:00:00 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/machine-learning/</guid>
+      <guid>https://learningisliving.net/tags/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -21,10 +21,10 @@
   
     <item>
       <title>papers</title>
-      <link>https://livingislearning.net/tags/papers/</link>
+      <link>https://learningisliving.net/tags/papers/</link>
       <pubDate>Thu, 06 Oct 2022 20:00:00 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/papers/</guid>
+      <guid>https://learningisliving.net/tags/papers/</guid>
       <description></description>
     </item>
     
@@ -32,10 +32,10 @@
   
     <item>
       <title>review</title>
-      <link>https://livingislearning.net/tags/review/</link>
+      <link>https://learningisliving.net/tags/review/</link>
       <pubDate>Thu, 06 Oct 2022 20:00:00 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/review/</guid>
+      <guid>https://learningisliving.net/tags/review/</guid>
       <description></description>
     </item>
     
@@ -43,10 +43,10 @@
   
     <item>
       <title>experiences</title>
-      <link>https://livingislearning.net/tags/experiences/</link>
+      <link>https://learningisliving.net/tags/experiences/</link>
       <pubDate>Mon, 27 Aug 2018 20:31:03 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/experiences/</guid>
+      <guid>https://learningisliving.net/tags/experiences/</guid>
       <description></description>
     </item>
     
@@ -54,10 +54,10 @@
   
     <item>
       <title>mental</title>
-      <link>https://livingislearning.net/tags/mental/</link>
+      <link>https://learningisliving.net/tags/mental/</link>
       <pubDate>Mon, 27 Aug 2018 20:31:03 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/mental/</guid>
+      <guid>https://learningisliving.net/tags/mental/</guid>
       <description></description>
     </item>
     
@@ -65,10 +65,10 @@
   
     <item>
       <title>philosophy</title>
-      <link>https://livingislearning.net/tags/philosophy/</link>
+      <link>https://learningisliving.net/tags/philosophy/</link>
       <pubDate>Mon, 27 Aug 2018 20:31:03 +0200</pubDate>
       
-      <guid>https://livingislearning.net/tags/philosophy/</guid>
+      <guid>https://learningisliving.net/tags/philosophy/</guid>
       <description></description>
     </item>
     

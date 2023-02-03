@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learning is Living</title>
-    <link>https://livingislearning.net/</link>
+    <link>https://learningisliving.net/</link>
     <description>Recent content on Learning is Living</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2023 12:09:07 +0100</lastBuildDate><atom:link href="https://livingislearning.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Feb 2023 12:09:07 +0100</lastBuildDate><atom:link href="https://learningisliving.net/index.xml" rel="self" type="application/rss+xml" />
   
     <item>
       <title>Where I Am Aiming to Be and Think I Am (in 2023)</title>
-      <link>https://livingislearning.net/blog/where_i_am_aiming_to_be_and_think_i_am_in_2023/</link>
+      <link>https://learningisliving.net/blog/where_i_am_aiming_to_be_and_think_i_am_in_2023/</link>
       <pubDate>Thu, 02 Feb 2023 12:09:07 +0100</pubDate>
       
-      <guid>https://livingislearning.net/blog/where_i_am_aiming_to_be_and_think_i_am_in_2023/</guid>
+      <guid>https://learningisliving.net/blog/where_i_am_aiming_to_be_and_think_i_am_in_2023/</guid>
       <description>It&amp;rsquo;s 2023 and my Ph.D. is coming to a close. Despite having an impostor syndrome like all good academics, I am trying to be more honest about my skills and achievments instead of downplaying them.
 This post is me practicing this.
 So despite it feeling really awkward, I do think that I am inching towards living up to one of my favourite aphorisms:
@@ -24,10 +24,10 @@ So despite it feeling really awkward, I do think that I am inching towards livin
   
     <item>
       <title>Day 4: Linear Programs</title>
-      <link>https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/</link>
+      <link>https://learningisliving.net/blog/combinatorial_christmas2022/4_linear_pograms/</link>
       <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/</guid>
+      <guid>https://learningisliving.net/blog/combinatorial_christmas2022/4_linear_pograms/</guid>
       <description>Born from conflict The Simplex algorithm  The Simplex algorithm: nitty gritty details Is this efficient?  Interior points methods  Karmarkar’s algorithm : some details   Edit from the future: I got covid on day 4 of writing this, which means I will move the schedule to “as soon as done”.
 Today we do the first deeper dive into technical details of a method. And given its ubiquity, I think it’s a good thing to start with the lingua franca of combinatorial optimization: Linear programming.</description>
     </item>
@@ -36,10 +36,10 @@ Today we do the first deeper dive into technical details of a method. And given 
   
     <item>
       <title>Day 3: History and fields</title>
-      <link>https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/</link>
+      <link>https://learningisliving.net/blog/combinatorial_christmas2022/3_history_and_fields/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/</guid>
+      <guid>https://learningisliving.net/blog/combinatorial_christmas2022/3_history_and_fields/</guid>
       <description>Yesterday I tried to give you a quick intuition on what optimization in general and combinatorial optimization in particular are, as well as hint a bit at the historical developments that brought them to the current form. Today I want to go a bit deeper on this. I should note this specific perspective on the timeline is my own - and thus you might want to compare and contrast with more venerable thinkers in the field, like Prof.</description>
     </item>
     
@@ -47,10 +47,10 @@ Today we do the first deeper dive into technical details of a method. And given 
   
     <item>
       <title>Day 2: Concepts and Language</title>
-      <link>https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/</link>
+      <link>https://learningisliving.net/blog/combinatorial_christmas2022/2_concepts_and_language/</link>
       <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/</guid>
+      <guid>https://learningisliving.net/blog/combinatorial_christmas2022/2_concepts_and_language/</guid>
       <description>What is optimization?  What do we optimize?  Why would optimising on a finite set be more difficult than on an infinite set?  Edit from the future: I got covid on day 4 of writing this, which means I will move the schedule to “as soon as done”.
 What is combinatorial optimization? Prof. Schrijver (Schrijver 2003) concisely summarizes it as
  Combinatorial optimization searches for an optimum object in a finite collection of objects.</description>
@@ -60,10 +60,10 @@ What is combinatorial optimization? Prof. Schrijver (Schrijver 2003) concisely 
   
     <item>
       <title>Day 1: Combinatorial Christmas 2022</title>
-      <link>https://livingislearning.net/blog/combinatorial_christmas2022/1_announcement/</link>
+      <link>https://learningisliving.net/blog/combinatorial_christmas2022/1_announcement/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/1_announcement/</guid>
+      <guid>https://learningisliving.net/blog/combinatorial_christmas2022/1_announcement/</guid>
       <description>This is a copy of the the index for this series.
  As my research takes a final pivot over into the land of combinatorial optimisation with a colleague I figured it might be a nice idea to do an advent calendar of blog posts about combinatorial optimisation An idea which I&amp;rsquo;m of course shamelessly cribbing from the https://adventofcode.com/  .
 Since I have deadlines to hit, I will have to do this economically so I&amp;rsquo;m counting this announcement and creating the outline and initial research as the first day.</description>
@@ -73,10 +73,10 @@ Since I have deadlines to hit, I will have to do this economically so I&amp;rsqu
   
     <item>
       <title>You cannot get the Permis C as an academic</title>
-      <link>https://livingislearning.net/blog/switzerlandpermisc/</link>
+      <link>https://learningisliving.net/blog/switzerlandpermisc/</link>
       <pubDate>Thu, 06 Oct 2022 20:00:00 +0200</pubDate>
       
-      <guid>https://livingislearning.net/blog/switzerlandpermisc/</guid>
+      <guid>https://learningisliving.net/blog/switzerlandpermisc/</guid>
       <description>I just received a letter from the Swiss Government telling me that my 5 years of PhD do not count towards the Permis C, according to the rules laid out here on page 22. I had originally taken his to mean that the PhD counts as normal employment, which as an EU citizen means I would be able to ask for the Permis C. This would mean I&amp;rsquo;d have some security of staying in the country (allowing for startup and other ventures that a normal employment might not permit), as well as taking my first steps towards the citizenship.</description>
     </item>
     
@@ -84,10 +84,10 @@ Since I have deadlines to hit, I will have to do this economically so I&amp;rsqu
   
     <item>
       <title>What I Did Instead of Making a New Website</title>
-      <link>https://livingislearning.net/blog/what_i_did_instead_of_making_a_website/</link>
+      <link>https://learningisliving.net/blog/what_i_did_instead_of_making_a_website/</link>
       <pubDate>Sat, 01 Oct 2022 13:22:20 +0200</pubDate>
       
-      <guid>https://livingislearning.net/blog/what_i_did_instead_of_making_a_website/</guid>
+      <guid>https://learningisliving.net/blog/what_i_did_instead_of_making_a_website/</guid>
       <description>I started working on this website in September of 2021, when I was really struggling during my PhD. I was in the process of getting some mental health diagnoses done and was all over the place mentally - changing labs and topics during COVID19 does not make for the most productivity enhancing start.
 Working on the website was the first step of tying together all the strewn subprojects I had done over the last 5 years and slowly start organising myself as well.</description>
     </item>
@@ -96,10 +96,10 @@ Working on the website was the first step of tying together all the strewn subpr
   
     <item>
       <title>Intellectual Gardens</title>
-      <link>https://livingislearning.net/blog/intellectual_garden/</link>
+      <link>https://learningisliving.net/blog/intellectual_garden/</link>
       <pubDate>Fri, 30 Sep 2022 15:14:12 +0200</pubDate>
       
-      <guid>https://livingislearning.net/blog/intellectual_garden/</guid>
+      <guid>https://learningisliving.net/blog/intellectual_garden/</guid>
       <description>I have pretty bad impostor syndrome.
 For a long time I&amp;rsquo;ve thought about intellectual work, of creative work, of entrepreneurship as something that only very talented people did, not me. I&amp;rsquo;ve always thought about myself as more of a reader, learner, tinkerer and fixer than a doer, finder,creator and performer.
 Let&amp;rsquo;s talk about impostor syndrome and how I&amp;rsquo;m trying to overcome it it.
@@ -110,10 +110,10 @@ Other people First, back to the talented people.</description>
   
     <item>
       <title>About...</title>
-      <link>https://livingislearning.net/about/</link>
+      <link>https://learningisliving.net/about/</link>
       <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/about/</guid>
+      <guid>https://learningisliving.net/about/</guid>
       <description>&amp;hellip;me I&amp;rsquo;m a researcher and learning enthusiast originally from Germany since having moved abroad, currently in the end stages of my PhD. On this website and on the wider internet I go by Nauka, although this is not my real name.
 This site is meant to be a place distinct from my professional or private identity to allow for more casual and experimental content, so I would ask you to stick to the pseudonym when commenting or referring to this side.</description>
     </item>
@@ -122,10 +122,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title>Three parts about anxiety</title>
-      <link>https://livingislearning.net/blog/threepartsonanxiety/</link>
+      <link>https://learningisliving.net/blog/threepartsonanxiety/</link>
       <pubDate>Mon, 27 Aug 2018 20:31:03 +0200</pubDate>
       
-      <guid>https://livingislearning.net/blog/threepartsonanxiety/</guid>
+      <guid>https://learningisliving.net/blog/threepartsonanxiety/</guid>
       <description>An essay I wrote in summer 2018 when I thought I was dealing well with anxiety and trauma, trying to explain what anxiety is to me others I know after a friend mentioned she does not understand it. Status 2022-10-01 I stand by most of it, although a follwup post might be in order.</description>
     </item>
     
@@ -133,10 +133,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/differential_inclusions/</link>
+      <link>https://learningisliving.net/blog/differential_inclusions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/differential_inclusions/</guid>
+      <guid>https://learningisliving.net/blog/differential_inclusions/</guid>
       <description></description>
     </item>
     
@@ -144,10 +144,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/integrators/</link>
+      <link>https://learningisliving.net/blog/integrators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/integrators/</guid>
+      <guid>https://learningisliving.net/blog/integrators/</guid>
       <description></description>
     </item>
     
@@ -155,10 +155,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/odes/</link>
+      <link>https://learningisliving.net/blog/odes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/odes/</guid>
+      <guid>https://learningisliving.net/blog/odes/</guid>
       <description></description>
     </item>
     
@@ -166,10 +166,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/pdes/</link>
+      <link>https://learningisliving.net/blog/pdes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/pdes/</guid>
+      <guid>https://learningisliving.net/blog/pdes/</guid>
       <description></description>
     </item>
     
@@ -177,10 +177,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/sdes/</link>
+      <link>https://learningisliving.net/blog/sdes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/sdes/</guid>
+      <guid>https://learningisliving.net/blog/sdes/</guid>
       <description></description>
     </item>
     
@@ -188,10 +188,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/stability/</link>
+      <link>https://learningisliving.net/blog/stability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/stability/</guid>
+      <guid>https://learningisliving.net/blog/stability/</guid>
       <description></description>
     </item>
     
@@ -199,10 +199,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/stochastic_differential_inclusions/</link>
+      <link>https://learningisliving.net/blog/stochastic_differential_inclusions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/stochastic_differential_inclusions/</guid>
+      <guid>https://learningisliving.net/blog/stochastic_differential_inclusions/</guid>
       <description></description>
     </item>
     
@@ -210,10 +210,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/dualities/</link>
+      <link>https://learningisliving.net/blog/dualities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/dualities/</guid>
+      <guid>https://learningisliving.net/blog/dualities/</guid>
       <description></description>
     </item>
     
@@ -221,10 +221,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/hilbert_spaces/</link>
+      <link>https://learningisliving.net/blog/hilbert_spaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/hilbert_spaces/</guid>
+      <guid>https://learningisliving.net/blog/hilbert_spaces/</guid>
       <description></description>
     </item>
     
@@ -232,10 +232,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/h%C3%B6lder/</link>
+      <link>https://learningisliving.net/blog/h%C3%B6lder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/h%C3%B6lder/</guid>
+      <guid>https://learningisliving.net/blog/h%C3%B6lder/</guid>
       <description></description>
     </item>
     
@@ -243,10 +243,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/riemann/</link>
+      <link>https://learningisliving.net/blog/riemann/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/riemann/</guid>
+      <guid>https://learningisliving.net/blog/riemann/</guid>
       <description></description>
     </item>
     
@@ -254,10 +254,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/duality_link/</link>
+      <link>https://learningisliving.net/blog/duality_link/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/duality_link/</guid>
+      <guid>https://learningisliving.net/blog/duality_link/</guid>
       <description></description>
     </item>
     
@@ -265,10 +265,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/solution_concepts/</link>
+      <link>https://learningisliving.net/blog/solution_concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/solution_concepts/</guid>
+      <guid>https://learningisliving.net/blog/solution_concepts/</guid>
       <description></description>
     </item>
     
@@ -276,10 +276,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/basic_notions/</link>
+      <link>https://learningisliving.net/blog/basic_notions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/basic_notions/</guid>
+      <guid>https://learningisliving.net/blog/basic_notions/</guid>
       <description></description>
     </item>
     
@@ -287,10 +287,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/hypergraphs_and_other_gens/</link>
+      <link>https://learningisliving.net/blog/hypergraphs_and_other_gens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/hypergraphs_and_other_gens/</guid>
+      <guid>https://learningisliving.net/blog/hypergraphs_and_other_gens/</guid>
       <description></description>
     </item>
     
@@ -298,10 +298,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/important_measures/</link>
+      <link>https://learningisliving.net/blog/important_measures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/important_measures/</guid>
+      <guid>https://learningisliving.net/blog/important_measures/</guid>
       <description></description>
     </item>
     
@@ -309,10 +309,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/eigen_and_svd/</link>
+      <link>https://learningisliving.net/blog/eigen_and_svd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/eigen_and_svd/</guid>
+      <guid>https://learningisliving.net/blog/eigen_and_svd/</guid>
       <description></description>
     </item>
     
@@ -320,10 +320,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/interesting_matrices/</link>
+      <link>https://learningisliving.net/blog/interesting_matrices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/interesting_matrices/</guid>
+      <guid>https://learningisliving.net/blog/interesting_matrices/</guid>
       <description></description>
     </item>
     
@@ -331,10 +331,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/vector_spaces/</link>
+      <link>https://learningisliving.net/blog/vector_spaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/vector_spaces/</guid>
+      <guid>https://learningisliving.net/blog/vector_spaces/</guid>
       <description></description>
     </item>
     
@@ -342,10 +342,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/polynomial_basic_approx/</link>
+      <link>https://learningisliving.net/blog/polynomial_basic_approx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/polynomial_basic_approx/</guid>
+      <guid>https://learningisliving.net/blog/polynomial_basic_approx/</guid>
       <description></description>
     </item>
     
@@ -353,10 +353,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/sum_of_squares_other_families/</link>
+      <link>https://learningisliving.net/blog/sum_of_squares_other_families/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/sum_of_squares_other_families/</guid>
+      <guid>https://learningisliving.net/blog/sum_of_squares_other_families/</guid>
       <description></description>
     </item>
     
@@ -364,10 +364,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/sigma_algebra/</link>
+      <link>https://learningisliving.net/blog/sigma_algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/sigma_algebra/</guid>
+      <guid>https://learningisliving.net/blog/sigma_algebra/</guid>
       <description></description>
     </item>
     
@@ -375,10 +375,10 @@ This site is meant to be a place distinct from my professional or private identi
   
     <item>
       <title></title>
-      <link>https://livingislearning.net/blog/stoch_process/</link>
+      <link>https://learningisliving.net/blog/stoch_process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://livingislearning.net/blog/stoch_process/</guid>
+      <guid>https://learningisliving.net/blog/stoch_process/</guid>
       <description></description>
     </item>
     

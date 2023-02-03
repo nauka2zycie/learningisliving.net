@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>machine learning on Learning is Living</title>
-    <link>https://livingislearning.net/tags/machine-learning/</link>
+    <link>https://learningisliving.net/tags/machine-learning/</link>
     <description>Recent content in machine learning on Learning is Living</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Oct 2022 20:00:00 +0200</lastBuildDate><atom:link href="https://livingislearning.net/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 20:00:00 +0200</lastBuildDate><atom:link href="https://learningisliving.net/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
   
     <item>
       <title>You cannot get the Permis C as an academic</title>
-      <link>https://livingislearning.net/blog/switzerlandpermisc/</link>
+      <link>https://learningisliving.net/blog/switzerlandpermisc/</link>
       <pubDate>Thu, 06 Oct 2022 20:00:00 +0200</pubDate>
       
-      <guid>https://livingislearning.net/blog/switzerlandpermisc/</guid>
+      <guid>https://learningisliving.net/blog/switzerlandpermisc/</guid>
       <description>I just received a letter from the Swiss Government telling me that my 5 years of PhD do not count towards the Permis C, according to the rules laid out here on page 22. I had originally taken his to mean that the PhD counts as normal employment, which as an EU citizen means I would be able to ask for the Permis C. This would mean I&amp;rsquo;d have some security of staying in the country (allowing for startup and other ventures that a normal employment might not permit), as well as taking my first steps towards the citizenship.</description>
     </item>
     
