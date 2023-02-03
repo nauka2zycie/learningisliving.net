@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/katex.min.css">
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex.min.js"></script>
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex-auto-render.min.js" onload='renderMathInElement(document.body,{
+                                                              delimiters: [
+  {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+  {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+  {left: "\\begin{align}", right: "\\end{align}", display: true},
+  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+  {left: "$$", right: "$$", display: true},
+  {left: "$", right: "$", display: false},
+  {left: "\\(", right: "\\)", display: false},
+  {left: "\\[", right: "\\]", display: true}
+]
+  });'></script>
+
+
+
+
+  <meta name="generator" content="Hugo 0.92.0-DEV" />
+  
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://livingislearning.net/css/style.css">
+
+
+
+  
+  
+  <title>Day 3: History and fields | Learning is Living</title>
+
+</head>
+
+  <body>
+        <div id="nav-border" class="container">
+  
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/">Home</a>
+    
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/blog">Blog</a>
+    
+  
+  
+  
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/about">More about me</a>
+    
+  
+  
+  
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <div id="breadcrumbs">
+
+
+    <a href="https://livingislearning.net/">Home</a>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/">Blog</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/">Combinatorial christmas2022</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/">3 history and fields</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+
+</div>
+
+      <main id="main">
+       
+
+<h1>Day 3: History and fields</h1>
+<p>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-03">2022-12-03</time>
+
+Last Modification: 2022-12-03
+
+, 1792 words, est. reading time: 9 minutes
+
+
+
+
+
+</p>
+<p>Yesterday I tried to give you a quick intuition on what optimization in general and combinatorial optimization in particular <em>are</em>, as well as hint a bit at the historical developments that brought them to the current form. Today I want to go a bit deeper on this. I should note this specific perspective on the timeline is my own - and thus you might want to compare and contrast with more venerable thinkers in the field, like Prof. Schrijvers who&rsquo;s own version of this I summarize in <a href="">section XX</a>.</p>
+<h1 id="primordial-times">Primordial times</h1>
+<p>As I tried to convey in the last post of this series, optimization is really the study on how we can write down puzzles in a way that allows us to <em>numerically</em> solve them, as well as the study and development of the procedures we use to do so.
+Before we had computers, i.e. machinery to perform the numerics <em>for</em> us that allow us to focus just on thinking about the procedures and problem structure on a meta-level, humans needed to do all the actual numerics and carefool bookkeeping that comprises actually solving problems.</p>
+<p>This isn&rsquo;t easy to do and so I think it&rsquo;s time to highlight all the societal and intellectual innovations that needed to happen before optimization as a general <em>thing</em> could happen:</p>
+<ol>
+<li>we needed to develop computing machinery that can take an algorithm and execute it for us</li>
+<li>Which required two things: the hardware to actually run the algorithm and the mental tools to specify the algorithm ina  way a machine can run (software both for the machine but also in our brains)</li>
+<li>For the hardware we needed to develop electric and mechanical precision engineering that made the <a href="">bomba</a> and before that, Baggages <a href="">computing machine</a> possible. That in turn requires a lot of logistics, communication etc. which all had to develop <em>without</em> the aid of machines to help doing the computation and analysis</li>
+<li>For the software, we needed to bootstrap math and formal languages, which itself involved the same auto-regressive, snake feeding on its tail type of development that hardware did: in order to discuss and communicate ideas you need to develop a formal language, but that language needs you to share the underlying <em>ideas and concepts</em> and for people to make the effort of understanding you, they will need to care about at least <em>roughly</em> the problems you are thinking about - or be giant nerds that will jump onto a puzzle just because they care bout it (Heyo!).
+<span class="marginnote">
+These nerds will then have <a href="https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy">juicy drama</a> about who invented things first. I should also note that I will be talking in a very Euro-centrist perspective because that&rsquo;s the lineage I grew up in, but <a href="https://en.wikipedia.org/wiki/Kerala_school_of_astronomy_and_mathematics">there are theories</a> that the Europeans didn&rsquo;t independently come up with all of this. Oh, and of course, this was and is mainly a rich peoples/privileged game: I spent 30 years learning about mathematics and other &ldquo;useless&rdquo; things before I felt I was able to do useful synthesis and contributions. If you need to feed your family, you need to either be gifted by nature so you can do this <em>much faster</em>, you&rsquo;ll need to be lucky enough to quickly find monetizeable problems to work on or you will probably not be able to study this at all
+</span>
+
+</li>
+</ol>
+<p>So we have at <em>least</em> two main branches merging into modern optimization theory, while the output of this theory will of course influence the very fields that gave birth to it (even in its nascent forms). We will see some examples in the following section.</p>
+<h1 id="proto-optimization">Proto-optimization</h1>
+<p>In the last post I dropped the names of some of the western ancestors of our modern theory  - Newton and Cauchy - who were both working on problems that were directly or indirectly inspired by astronomy, navigations and construction (although Newton did a lot of other stuff as well, and Cauchy was already a mathematician in the modern sense of thinking about abstract problems who just <em>happened</em> to also have concrete motivations.</p>
+<p>Newton made a lot of contributions western thought, but the one that bears his name is <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton&rsquo;s method</a>.
+The special case that made the method famous was presented by others in 1711, written up by Newton in 1669 and was was one of the earliest ways of finding roots (a.k.a. $x$ s.t. $f(x)=0$). The generalized, modern template looks like this</p>
+<p>$$
+x_{n+1}=x_n - \frac{f(x_n)}{\dot{f}(x_n)}
+$$</p>
+<span class="marginnote">
+While I&rsquo;m a Leibniz or Euler notation man myself, I felt it&rsquo;s appropriate to use Newton notation in this post. From tomorrow onwords on, we&rsquo;ll be using $\frac{d f(x)}{dx}$,$\frac{\delta f(x)}{\delta x}$ or $\nabla f(x)$ for derivatives, partial derivatives and gradients respectively.
+</span>
+
+
+<p>and will be used to find the root of the <em>derivative</em> when looking for minima or maxima (since extrema have derivative/gradient zero), leading to the form</p>
+<p>$$
+x_{n+1}=x_n - \frac{\dot{f}(x_n)}{\ddot{f}(x_n)}
+$$</p>
+<p>This was template influenced or at least was known by Cauchy when he wrote about gradient descent in 1848.<span class="marginnote">
+This section basically summarizes [@lemarechalCauchyGradientMethod2012]
+</span>
+
+
+He described and analyzed the template</p>
+<p>$$
+x_{n+1}=x_n - \eta\dot{f}(x_n)
+$$</p>
+<p>which for a &ldquo;small enough&rdquo; $\eta$ will converge to a local minima or a least close enough to it to find the solution with Newtons method.</p>
+<p>I find it interesting that the <em>simpler</em> method was &ldquo;developed&rdquo; over 100 years later (or was at least not known to be well studied). It might be even more suprising that it took until 1951 until we have a record of someone trying to apply a similar scheme to fitting curves to data [@robbinsStochasticApproximationMethod1951].
+The modernized template of this algorithm (the <em>stochastic</em> gradient descent, or Robbins-Monro algorithm) looks like:</p>
+<p>$$
+x_{n+1}=x_n - \eta\dot{f}(x_n;\mathbf{y}_n);\quad \mathbf{y}_n\sim p(\mathbf{y})
+$$</p>
+<p>Here $\mathbf{y}$ captures the stochasticity we deal with in estimating the derivatives, and we assume that $\mathbb{E}_{\mathbf{y}}[\dot{f}(x,\mathbf{y}]=\dot{f}^*(x)$, i.e. averaging over the stochastic derivatives will yield the real derivatives.</p>
+<p>Or at least, it might be surprising until you go back to the dependency tree I sketched above: to even have <em>access</em> to a stochastic function like this, we need to be able to access data samples and perform updates while those samples are still revelant. For Newton and Cauchy, these were really tools to find <em>coefficients</em> of functions which lead to insight by construction. Data was extremely expensive and rare, and you had no real way of dealing with it being unreliable by just collecting more as we do above with the expected value assumption. You had to do your best to measure precisely, then maybe perform some auxiliary computation refining your estimate, <em>then</em> you would use your proto-optimization algorithm to help you solve your system of equations for what you want to find.</p>
+<h1 id="towards-combinatorial-optimization">Towards combinatorial optimization</h1>
+<p>In between Newton and Cauchy are two other luminaries of western mathematics: <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Gauss</a> and <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>.</p>
+<p>Both were incredibly influential mathematicians (really polymaths, but at the tame that came with the territory), although very different: Euler wrote prolifically (866 publications + correspondance). Gauss had the motto &ldquo;few but ripe&rdquo;, and didn&rsquo;t publish most of his discoveries. For our purposes, Euler is important because he laid the foundations of (amongst many things) <a href="https://en.wikipedia.org/wiki/Leonhard_Euler#Graph_theory">graph theory</a> which is one area where combinatorial optimization probems occur frequenty. Euler also worked on special versions of  <a href="https://en.wikipedia.org/wiki/Hamiltonian_path">Hamiltonian paths</a> called the <a href="https://en.wikipedia.org/wiki/Knight%27s_tour">knights tour</a> (have a knight visit every space on a chess board), the finding and optimization of which is a classical combinatorial optimization problem.</p>
+<p>Gauss, a few decades later, mentioned a <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method">method of finding solutions to systems of linear equations</a> of the form</p>
+<p>$$
+Ax=b
+$$</p>
+<p>which is still in use today and marks the moment where systems of linear equations became &ldquo;manageable&rdquo; by those in the know. However, this is not <em>optimization</em>, but closed form solving.</p>
+<p>Later in the 1940s, Leonid Kantorovitch, Tjalling Koopmans (who jointly got an economics Nobel out for this), Frank Hitchcock and George Dantzig all (apparently independently?) developed this further into what we now call <a href="https://en.wikipedia.org/wiki/Linear_programming#History">Linear Programming</a> <span class="marginnote">
+And apparently, Fourier, another O.G. of mathematics was thinking about it already in 1827? The things you learn when researching while blogging!
+</span>
+
+. They all were trying to figure out allocations of investments and other planning problems like transportation and assignment - all problems that are now, solidly, in the domain of combinatorial optimization as soon as you perform them on integers (see the last post).</p>
+<h1 id="schrijvers-tour">Schrijvers tour</h1>
+<p>This is where my little excursion joins Prof. Schrijvers [@Schrijvers] except that he starts in 1784 with Monge&rsquo;s assignment problem, which we will see in 3 days when we start talking about transportation theory (i.e. the figuring out how to most efficiently assign and move stuff from $n$ locations to $m$ destinations to fullfill some form of demand with some form of production).
+I recommend reading the actual document, but the TL;DR is:</p>
+<ul>
+<li>1784: Gaspar Monge formalizes the transportation problem, using efficient iron ore-to-smelting routes as a motivation</li>
+<li>1832: A salespersons manual first illustrates the Traveling Salesperson Problem</li>
+<li>1912-1931: Frobenius and König study Bipartite Graph matching, a special case of assignment which we won&rsquo;t cover this year</li>
+<li>1926: Boruvka publishes a first solution to a shortest spanning tree problem for economical electric power design</li>
+<li>1930: Menger is the first mathematician to publish on the TSP and brings it to Harvard</li>
+<li>1930: A.N. Tolstoi studies the transportation problem and develops some of the heuristics re-discovered later</li>
+<li>1931: Egerváry extends Königs work on weighted matchinigs, inspiring Kuhn to develop the Hungarian method in 1950</li>
+<li>1939: Kantorovitch develops linear programming as a general framework to think about problems like transportation, assignment etc. (maybe Kantorovitch also found the Simplex method or at least a variant in 1938 already) <span class="marginnote">
+Read Prof. Schrijvers review! He goes into way more detail
+</span>
+
+</li>
+<li>1941:Hitchcock studies the assignment problem and maybe <em>also</em> discovers a form of Simplex</li>
+<li>1940-1950: Dantzig develops Simpex</li>
+<li>1946: Easterfield publishes what one might call the first &ldquo;real&rdquo; assignment algorithm which improves the brute force  $\mathcal{O}(n!)$ complexity to  speedy $\mathcal{O}(2^nn^2)$</li>
+<li>1949: Robinson is working on the Traveling salesperson problem (day 10) and &ldquo;only&rdquo; makes progress on the assignment problem</li>
+<li>1951: Dantzigs Simplex method for solving LPs is published</li>
+<li>1954: Ford and Flukerson formalize the Max-flow problem, publish the max-flow min-cut theorem</li>
+<li>1955-1957: Hungarian method developed by Kuhn and analyzed by Munkres</li>
+<li>1955-1959 Shortest Path problem introduced and quickly &ldquo;solved&rdquo; in various variations by Shimbel, Bellman-Ford, Dijkstra, Dantzig and others</li>
+</ul>
+<p>where I&rsquo;ve omitted bit of the TSP and transportation developments. Read the paper!</p>
+<h1 id="beyond-1960">Beyond 1960</h1>
+<p>Prof. Schrijvers ends his survey in 1960 and  mentions that this excludes the complexity work of Karp (which we&rsquo;ll see on days 13-16) and important work by Jack Edmonds on matching involving matroids (which are mathematical objects which allow efficient solutions to the matching problem). Originally I wanted to continue beyond this, but I do not have the time or energy to continue. Next year!</p>
+
+
+
+      </main>
+    <footer>
+      
+
+      <footer>
+  
+
+</footer>
+
+
+    </footer>
+    </div>
+  </body>
+</html>

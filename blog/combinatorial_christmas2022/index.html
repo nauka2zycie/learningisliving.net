@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/katex.min.css">
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex.min.js"></script>
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex-auto-render.min.js" onload='renderMathInElement(document.body,{
+                                                              delimiters: [
+  {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+  {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+  {left: "\\begin{align}", right: "\\end{align}", display: true},
+  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+  {left: "$$", right: "$$", display: true},
+  {left: "$", right: "$", display: false},
+  {left: "\\(", right: "\\)", display: false},
+  {left: "\\[", right: "\\]", display: true}
+]
+  });'></script>
+
+
+
+
+  <meta name="generator" content="Hugo 0.92.0-DEV" />
+  
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://livingislearning.net/css/style.css">
+
+
+
+  
+  
+  <title>Combinatorial Christmas 2022 | Learning is Living</title>
+
+</head>
+
+  <body>
+        <div id="nav-border" class="container">
+  
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/">Home</a>
+    
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/blog">Blog</a>
+    
+  
+  
+  
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/about">More about me</a>
+    
+  
+  
+  
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <div id="breadcrumbs">
+
+
+    <a href="https://livingislearning.net/">Home</a>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/">Blog</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/">Combinatorial christmas2022</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+
+</div>
+
+      <main id="main">
+       
+
+<h1>Combinatorial Christmas 2022</h1>
+
+<section>
+  
+
+
+  <p>As my research takes a final pivot over into the land of combinatorial optimisation with a colleague I figured it might be a nice idea to do an <a href="https://en.wikipedia.org/wiki/Advent_calendar">advent calendar</a> of blog posts about combinatorial optimisation <span class="marginnote">
+An idea which I&rsquo;m of course shamelessly cribbing from the <a href="https://adventofcode.com/">https://adventofcode.com/</a>
+</span>
+
+.</p>
+<p>Since I have deadlines to hit, I will have to do this economically so I&rsquo;m counting this announcement and creating the outline and initial research as the first day. My currently planned rough structure is as follows:</p>
+<ul>
+<li>on day 2 and 3 we will give a quick intro into optimisation and what makes it <em>combinatorial</em> (day 2) as well as do a quick tour of the history (day 2), drawing mainly on <a href="https://scholar.google.com/citations?hl=en&amp;user=JDeOi2MAAAAJ&amp;view_op=list_works">Prof. Schrijvers</a> scholarship on this topic</li>
+<li>days 4 and 5 will be devoted to introducing linear programs, convex programs and constraints in a bit more detail, since we&rsquo;ll be using these notions a lot</li>
+<li>days 6, 7 and 8 will be devoted to a journey from the original transportation problem to modern optimal transport theory, mainly for the historical continuity</li>
+<li>day 9 will be an introduction of graphs and sets and an overview on problems defined on them, setting the stage for the next X days</li>
+<li>day 10,11 and 12 will be devoted to the Traveling Sales Person, Minimum Vertex Cover and Max independent set problems</li>
+<li>day 13, 14 and 15 will be an interlude on complexity theory, approximation theory and parametrized complexity</li>
+<li>on days 16 to 20 will talk about graph coloring, steiner trees, knapsacks, scheduling,partitioning and max-cut problems</li>
+<li>finally, days 20 to 23 we will talk about integer linear programming (ILP), <em>mixed</em> integer linear programming (MILPs), SAT and SMT problems.</li>
+<li>and for <a href="https://en.wikipedia.org/wiki/December_24#Holidays_and_observances">Christmas Eve,Aðfangadagskvöld,Jolaften,Wigilia</a> and of course, the birthday of <a href="https://en.wikipedia.org/wiki/Adam_Mickiewicz">Pan Mickiewicz</a>, we will talk about how <em>neural networks</em> and my research ties into all of this</li>
+</ul>
+<p>You can see place holder posts below if reading before 2022-12-24 and can directly dive into the calendar if you are from the future -  I hope the Ukraine war is over by then.</p>
+<p>Слава Україні! And Happy Holidays!</p>
+<hr>
+<p><strong>Edit from the future</strong>: I got covid on day 4 of writing this, which means I will move the schedule to &ldquo;as soon as done&rdquo;.</p>
+
+</section>
+<section>
+
+    
+    
+    
+      <p>
+      <a class="font-125" href="https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/">Day 4: Linear Programs</a><br>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-04">2022-12-04</time>
+
+Last Modification: 2022-12-04
+
+, 1407 words, est. reading time: 7 minutes
+
+
+
+
+
+
+      </p>
+    
+    
+    
+    
+    
+      <p>
+      <a class="font-125" href="https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/">Day 3: History and fields</a><br>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-03">2022-12-03</time>
+
+Last Modification: 2022-12-03
+
+, 1792 words, est. reading time: 9 minutes
+
+
+
+
+
+
+      </p>
+    
+    
+    
+    
+    
+      <p>
+      <a class="font-125" href="https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/">Day 2: Concepts and Language</a><br>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-02">2022-12-02</time>
+
+Last Modification: 2022-12-02
+
+, 2007 words, est. reading time: 10 minutes
+
+
+
+
+
+
+      </p>
+    
+    
+    
+    
+    
+      <p>
+      <a class="font-125" href="https://livingislearning.net/blog/combinatorial_christmas2022/1_announcement/">Day 1: Combinatorial Christmas 2022</a><br>
+
+      </p>
+    
+    
+    
+</section>
+
+      </main>
+    <footer>
+      
+
+      <footer>
+  
+
+</footer>
+
+
+    </footer>
+    </div>
+  </body>
+</html>

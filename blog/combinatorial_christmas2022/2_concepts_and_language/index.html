@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/katex.min.css">
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex.min.js"></script>
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex-auto-render.min.js" onload='renderMathInElement(document.body,{
+                                                              delimiters: [
+  {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+  {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+  {left: "\\begin{align}", right: "\\end{align}", display: true},
+  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+  {left: "$$", right: "$$", display: true},
+  {left: "$", right: "$", display: false},
+  {left: "\\(", right: "\\)", display: false},
+  {left: "\\[", right: "\\]", display: true}
+]
+  });'></script>
+
+
+
+
+  <meta name="generator" content="Hugo 0.92.0-DEV" />
+  
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://livingislearning.net/css/style.css">
+
+
+
+  
+  
+  <title>Day 2: Concepts and Language | Learning is Living</title>
+
+</head>
+
+  <body>
+        <div id="nav-border" class="container">
+  
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/">Home</a>
+    
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/blog">Blog</a>
+    
+  
+  
+  
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/about">More about me</a>
+    
+  
+  
+  
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <div id="breadcrumbs">
+
+
+    <a href="https://livingislearning.net/">Home</a>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/">Blog</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/">Combinatorial christmas2022</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/">2 concepts and language</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+
+</div>
+
+      <main id="main">
+       
+
+<h1>Day 2: Concepts and Language</h1>
+<p>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-02">2022-12-02</time>
+
+Last Modification: 2022-12-02
+
+, 2007 words, est. reading time: 10 minutes
+
+
+
+
+
+</p>
+<ul>
+<li><a href="#what-is-optimization" id="toc-what-is-optimization">What
+is optimization?</a>
+<ul>
+<li><a href="#what-do-we-optimize" id="toc-what-do-we-optimize">What do
+we optimize?</a></li>
+</ul></li>
+<li><a
+href="#why-would-optimising-on-a-finite-set-be-more-difficult-than-on-an-infinite-set"
+id="toc-why-would-optimising-on-a-finite-set-be-more-difficult-than-on-an-infinite-set">Why
+would optimising on a finite set be more difficult than on an infinite
+set?</a></li>
+</ul>
+<p><strong>Edit from the future</strong>: I got covid on day 4 of
+writing this, which means I will move the schedule to “as soon as
+done”.</p>
+<hr />
+<p>What <em>is</em> combinatorial optimization? Prof. Schrijver <span
+class="citation"
+data-cites="schrijverCombinatorialOptimizationPolyhedra2003">(<a
+href="#ref-schrijverCombinatorialOptimizationPolyhedra2003"
+role="doc-biblioref">Schrijver 2003</a>)</span> concisely summarizes it
+as</p>
+<blockquote>
+<p>Combinatorial optimization searches for an optimum object in a finite
+collection of objects.</p>
+</blockquote>
+<p>which is of course correct (Prof. Schrijver forgot more about
+Combinatorial Optimization than I have ever known) but might also raise
+some questions:</p>
+<ol type="1">
+<li>As we are breathlessly reminded everytime OpenAI,Deepmind etc.
+release a new model, deep learning routinely solve optimization problem
+over infinitely many points in <span
+class="math inline">\(\mathbb{R}^n\)</span> with very large <span
+class="math inline">\(n\)</span>. How could there be an issue in
+optimising over finite objects?</li>
+<li>Isn’t this tautological? Optimization means looking for an optimum?
+What does this mean?</li>
+</ol>
+<p>Where 1) might be your reaction if you heard about optimization and
+deep learning but didn’t study computer science per se while 2) might be
+your reaction if technology doesn’t form a core part of your
+identity.</p>
+<h1 id="what-is-optimization">What is optimization?</h1>
+<p>In our modern world, optimization generally refers to having a
+computer find a setting which solves a problem we care about.
+Optimization theory is then the body of work that tries to invent and
+study problem formulations and procedures these computers can implement
+- algorithms - to solve these problems. We will go into the history of
+optimization and in particular combinatorial optimization tomorrow, but
+for today, it’s important to appreciate the fact that the jargon of this
+study of has been seeping into everyday language for almost 60 years now
+(<a
+href="https://books.google.com/ngrams/graph?content=optimal%2Cbest%2Cideal%2Cgood%2Cperfect%2Cuseful%2Ctrue%2Csatisfying%2Cfitting%2Csuitable%2Coptimum%2Csolution&amp;year_start=1800&amp;year_end=2019&amp;corpus=26&amp;smoothing=3">check
+out this google ngram</a>).</p>
+<p>So a lot of the language we take for granted actually derives from
+the fact that these things became a lot more popular with the advent of
+computing machines which could efficiently perform these. Newton, Gauss
+and other pre-computer mathematicians tended to think in terms of
+finding <em>solutions</em> or maybe <em>extrema</em>, and early
+luminaries like George Dantzig or Leonid Kantorovitch used the
+mathematical term “program” as in “Linear Programming”.</p>
+<p>For Newton, Cauchy etc., finding <em>solutions</em> was what
+mattered: you had a mathematical question (or example, if I put two
+sticks with length <span class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span> into a <span
+class="math inline">\(90°\)</span> angle, how far are they apart?) and
+you either find or don’t find a closed form solution (Answer: <span
+class="math inline">\(\sqrt{a^2+b^2}\)</span>) which you can or cannot
+compute. Optimization, finding an <em>optimum</em> (or at least getting
+close to one) is really a notion which starts to make sense once you
+have problems for which <em>many</em> possible “solutions” exist, but
+they differ in quality and/or finding the closed form solution is
+tedious - Cauchy derived gradient descent, a workhorse of modern
+optimization algorithms as a why to quickly refine an initial guess and
+then use Newtons root finding method to finish the job.</p>
+<h2 id="what-do-we-optimize">What do we optimize?</h2>
+<p>So how do we do this? Well, we first find a formal way of writing
+down our problem. For this we use <em>functions</em>, which are simply
+fixed rules that map one value to another. What these values
+<em>are</em> is up to you, but if you grew up in a country with a
+working school system, you might have seen symbols like <span
+class="math inline">\(\mathbb{N},\mathbb{Z}\)</span> and <span
+class="math inline">\(\mathbb{R}\)</span> already, which stand for the
+<em>natural</em> (all strictly positive whole numbers,without zero),
+<em>integer</em> (all whole numbers, negative and zero included) and
+<em>real</em> numbers (the continuous number line, all numbers you need
+to care about unless it’s your job to know the others, includes even
+most of the weird ones like <span class="math inline">\(\pi\)</span> and
+<span class="math inline">\(e\)</span>), which are usually used to
+describe the <em>domain</em> of the function - the numbers that can go
+in - and the <em>range</em> - the values it can take.</p>
+<p>For example, a function of the form <span
+class="math inline">\(f:\mathbb{R} \rightarrow \mathbb{Z}\)</span> maps
+the real numbers to the integers and could describe any operation
+followed by rounding, truncation or operations like it. Or you might
+have functions of the form <span
+class="math inline">\(f:\mathbb{R}^2\rightarrow \mathbb{R}\)</span> and
+<span class="math inline">\(f:\mathbb{R}\times\mathbb{R}\rightarrow
+\mathbb{R}\)</span> which are two ways of writing a function which takes
+multiple inputs and maps them onto a single number. The first notation
+emphasizes the fact that we have <span class="math inline">\(2\)</span>
+<em>dimensions</em> of the same type while the 2nd emphasizes the fact
+we have <span class="math inline">\(2\)</span> <em>separately
+varying</em> inputs.</p>
+<p>There are many fancy terms like injective, surjective and bijective,
+continuous,smooth, convex etc., but all of these are then already
+talking about what <em>types</em> of functions we are working with. The
+main concept you should take away now is that we can write down a
+problem (like finding the minimum energy configuration of a physical
+system) and write it in the following form:</p>
+<p><span class="math display">\[\begin{align}
+\min_\theta &amp;f(\theta)\\
+\text{s.t. }&amp;g(\theta)\leq 0
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(f:?\rightarrow \mathbb{R}\)</span>
+and <span class="math inline">\(g:?\rightarrow \mathbb{R}\)</span> are
+our <em>loss</em> and <em>constraint</em> functions respectively and
+<span class="math inline">\(\theta\)</span> is the domain we work in.
+For the physical system, <span class="math inline">\(f\)</span> might be
+the total energy in a system, <span
+class="math inline">\(\theta\)</span> the configuration of the electrons
+and atoms making up the system as well as their motion, temperature etc.
+and <span class="math inline">\(g\)</span> might be some constraints we
+need the system to follow (e.g. enforcing atoms to occupy separate
+places in space). With enough creativity we can fit a lot of problems
+into this template, and a lot of optimization effort is in finding a
+good formulation.</p>
+<p>One of the key choices in modeling your problem is in the
+<em>domain</em> we optimize over, where the current language of analysis
+has converged on using <em>sets</em> by default. The real numbers are an
+uncountable infinite set, the integers are countably infinite and a
+restricted subset (say, the numbers between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(100\)</span>) is simply <em>finite</em>.
+Intuitively you might think that these get progressively easier to
+optimize over, but in the next section we will explain why that is in
+fact <em>wrong</em> or at least <em>not always the case</em>.</p>
+<ul>
+<li><em>Note 1</em>: Economics tends to talk about profit
+<em>maximisation</em>, but that’s simply minimizing the negative of the
+profit.</li>
+<li><em>Note 2</em>: There are also concepts like <em>satisficing</em>
+which wants to find not <em>the</em> minimum but <em>a</em> solution
+that fulfills the constraints as fast as possible, or
+<em>multi-objective</em> optimization which cares about multiple <span
+class="math inline">\(f\)</span> at once, these and other notions can
+usually be rewritten in this template (and are, since it’s much easier
+to think about) (and are, since it’s much easier to think about)</li>
+</ul>
+<h1
+id="why-would-optimising-on-a-finite-set-be-more-difficult-than-on-an-infinite-set">Why
+would optimising on a finite set be more difficult than on an infinite
+set?</h1>
+<p>A lot has to do with the interplay between domain, <span
+class="math inline">\(f\)</span> and <span
+class="math inline">\(g\)</span>. If you think of the simplest possible
+real world problem, it might be the question of a craftsperson deciding
+what to produce. Given a list of <span class="math inline">\(n\)</span>
+options, each requiring a certain amount of <span
+class="math inline">\(K\)</span> resources (which we can write as a
+vector <span class="math inline">\(a_i \in \lbrace a:a\in \mathbb{R}^K
+\land a_k \geq 0\rbrace\)</span> for <span class="math inline">\(i\in
+[0,\dots,n-1]\)</span>), what amounts <span
+class="math inline">\(x_i\)</span> should they produce for each product
+<span class="math inline">\(i\)</span> to maximise their income given
+prices <span class="math inline">\(c_i\)</span> and their resources
+<span class="math inline">\(r \in \mathbb{R}^K\)</span>?</p>
+<p>They want to find</p>
+<p><span class="math display">\[\begin{align}
+\arg\min_x -c^T x\\
+\text{s.t. }Ax \leq r
+\end{align}\]</span></p>
+<p>or equivalently <span class="math display">\[\begin{align}
+\arg\min_x -c^T x\\
+\text{s.t. }Ax-r \leq 0
+\end{align}\]</span></p>
+<p>Where we form <span class="math inline">\(A\in\mathbb{R}^{k\times
+n}\)</span> by combining the <span class="math inline">\(n\)</span>
+resource cost vectors of length <span class="math inline">\(k\)</span>
+into a <span class="math inline">\(k\times n\)</span> matrix.</p>
+<p>For solving this problem I refer you to the Simplex, Interior Point,
+Augmented Lagrangian methods (for small <span
+class="math inline">\(n,k\)</span> you can even solve it by drawing
+lines). The point I want you to focus on, is that in the problem
+formulation I did a bit of sleight of hand: we implicitly assume we can
+create arbitrarily fine slices of wares and sell them. While this might
+be true to <em>some</em> degree if you are working with liquids,
+realistically, there will be a finite amount <span
+class="math inline">\(\epsilon\)</span> which is the smallest amount you
+can cut your raw materials into or sell. This means that the problem
+<em>really</em> should be written in the following (eqivalent)
+forms:</p>
+<p><span class="math display">\[\begin{align}
+\arg\min_{x\in \mathbb{Z}^n} &amp;-c^T x\\
+\text{s.t. }&amp;Ax-r \leq 0
+\end{align}\]</span> <span class="math display">\[\begin{align}
+\arg\min_{x\in \mathbb{R}^n} &amp;-c^T x\\
+\text{s.t. }&amp;Ax-r \leq 0\\
+&amp;\text{rem } x /\epsilon = 0
+\end{align}\]</span></p>
+<p>where the 2nd form already gives a hint: we are solving the same
+problem with <em>more</em> constraints, i.e. it becomes more natural
+that it becomes harder.</p>
+<p>The hardness comes from the fact that we are <em>forced</em> to take
+steps of at least size <span class="math inline">\(\epsilon\)</span>
+where previously we had much more control about the exact amounts we
+produce and sell. In another perspective (and using a bit more jargon),
+we often exploit some <em>assumptions</em> about the functions and sets
+we are optimizing/optimizing on - for example, we often assume that
+<span class="math inline">\(f\)</span> changes relatively slowly and
+smoothly if we take small enough steps. But <em>small enough</em>
+becomes impossible if <span class="math inline">\(\epsilon\)</span>
+becomes large enough - hence we can make less assumptions to exploit
+when looking for a solution. And for a final intuitive explanation:
+observe the example given <a
+href="https://en.wikipedia.org/wiki/Integer_programming">here</a> and
+you will note that while finding the optimum ignoring the integrality
+constrained is “easy” (you follow the constraints as you try to go
+higher and higher, which is what Simplex and IP points do
+mathematically), deciding where to go from the <em>LPOpt</em> point is
+nontrivial: all you know is you are violating the constraints, but you
+don’t know where exactly the best feasible point is. Rounding to the
+<em>nearest</em> integer yields an infeasible point, and while in this
+particular case exploring the neighbourhood of integers might be
+feasible, as your dimension <span class="math inline">\(d\)</span> grows
+you will have <span class="math inline">\(2^d\)</span> points to
+search.</p>
+<p>We will get to complexity in the middle of december, but in general,
+you want your changing parameters (like dimension) in the <em>base</em>
+position, not the exponential position to solve them (the fancy way of
+saying this is you want to be in <strong>P</strong>, not
+<strong>NP</strong>). Without further assumptions, integer linear
+programs like this are in <strong>NP</strong>, because the exponential
+will pop up <em>somewhere</em>.</p>
+<p>Returning to Prof. Schrijvers definition, the full quote reads</p>
+<blockquote>
+<p>Combinatorial optimization searches for an optimum object in a finite
+collection of objects. Typically, the collection has a concise
+representation (like a graph), while the number of objects is huge —
+more precisely, grows exponentially in the size of the representation
+(like all matchings or all Hamiltonian circuits). So scanning all
+objects one by one and selecting the best one is not an option. More
+efficient methods should be found.</p>
+</blockquote>
+<p>Which captures the crux of the matter: if for some property
+describing the size of your problem the number of “finite” options grows
+exponentially, you have the worst of both worlds. You can’t rely on the
+nice continuity properties of infinite points to ride the constraints to
+the best value of the feasible set , but you also can’t hope to
+enumerate all options.</p>
+<p>This pops up whenever we talk about discrete things <em>relating</em>
+to, <em>combining with</em> or <em>being selected from amongst</em>
+other discrete things, e.g.</p>
+<ul>
+<li>identifying <em>subsets</em> which fulfill a certain condition
+(subset sums, knapsacks, matching)</li>
+<li>identifying a specific <em>global</em> relation induced by
+<em>local</em> relations (traveling sales person problem)</li>
+<li>finding a finite size combination or assignment of elements to
+fulfill a condition (SAT, program synthesis,IPs)</li>
+</ul>
+<p>and in fact, the classical <a
+href="https://en.wikipedia.org/wiki/Enumerative_combinatorics">enumerative
+combinatorics</a> often provides the language about what structure the
+search space takes (combinations, permutations, multisets and
+partitions) as well as the term <a
+href="https://en.wikipedia.org/wiki/Combinatorial_explosion">“combinatorial
+blowup”</a>, which captures the fact that for any <span
+class="math inline">\(k,n \in \mathbb{Z},k,n &gt; 1\)</span>, <span
+class="math inline">\(\lim_{n\rightarrow \infty} n^k\leq k^n \leq
+n!\)</span>, and usually you don’t need to go very large. <a
+href="https://en.wikipedia.org/wiki/Gamma_function">Oh, and you can do
+this meaningfully for Reals too!</a></p>
+<p>And this is what makes combinatorial optimization different: the
+discrete nature of the domain we operate on forces us to abandon
+algorithms which exploit continuity while the combinatorial blowup of
+the search space forces us to come up with <em>new things</em> to
+exploit.</p>
+<p>Tomorrow we will talk a bit more on how this field developed and
+where some of the classic problems came from.</p>
+<p>Happy Holidays! And Слава Україні!</p>
+<hr />
+<p>References:</p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-schrijverCombinatorialOptimizationPolyhedra2003"
+class="csl-entry" role="doc-biblioentry">
+Schrijver, A. 2003. <em>Combinatorial Optimization: Polyhedra and
+Efficiency</em>. Algorithms and Combinatorics 24. <span>Berlin ; New
+York</span>: <span>Springer</span>.
+</div>
+</div>
+
+
+
+      </main>
+    <footer>
+      
+
+      <footer>
+  
+
+</footer>
+
+
+    </footer>
+    </div>
+  </body>
+</html>

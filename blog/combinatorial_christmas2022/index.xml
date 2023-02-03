@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combinatorial Christmas 2022 on Learning is Living</title>
+    <link>https://livingislearning.net/blog/combinatorial_christmas2022/</link>
+    <description>Recent content in Combinatorial Christmas 2022 on Learning is Living</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://livingislearning.net/blog/combinatorial_christmas2022/index.xml" rel="self" type="application/rss+xml" />
+  
+    <item>
+      <title>Day 4: Linear Programs</title>
+      <link>https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/</guid>
+      <description>Born from conflict The Simplex algorithm  The Simplex algorithm: nitty gritty details Is this efficient?  Interior points methods  Karmarkar’s algorithm : some details   Edit from the future: I got covid on day 4 of writing this, which means I will move the schedule to “as soon as done”.
+Today we do the first deeper dive into technical details of a method. And given its ubiquity, I think it’s a good thing to start with the lingua franca of combinatorial optimization: Linear programming.</description>
+    </item>
+    
+    
+  
+    <item>
+      <title>Day 3: History and fields</title>
+      <link>https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/3_history_and_fields/</guid>
+      <description>Yesterday I tried to give you a quick intuition on what optimization in general and combinatorial optimization in particular are, as well as hint a bit at the historical developments that brought them to the current form. Today I want to go a bit deeper on this. I should note this specific perspective on the timeline is my own - and thus you might want to compare and contrast with more venerable thinkers in the field, like Prof.</description>
+    </item>
+    
+    
+  
+    <item>
+      <title>Day 2: Concepts and Language</title>
+      <link>https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/2_concepts_and_language/</guid>
+      <description>What is optimization?  What do we optimize?  Why would optimising on a finite set be more difficult than on an infinite set?  Edit from the future: I got covid on day 4 of writing this, which means I will move the schedule to “as soon as done”.
+What is combinatorial optimization? Prof. Schrijver (Schrijver 2003) concisely summarizes it as
+ Combinatorial optimization searches for an optimum object in a finite collection of objects.</description>
+    </item>
+    
+    
+  
+    <item>
+      <title>Day 1: Combinatorial Christmas 2022</title>
+      <link>https://livingislearning.net/blog/combinatorial_christmas2022/1_announcement/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://livingislearning.net/blog/combinatorial_christmas2022/1_announcement/</guid>
+      <description>This is a copy of the the index for this series.
+ As my research takes a final pivot over into the land of combinatorial optimisation with a colleague I figured it might be a nice idea to do an advent calendar of blog posts about combinatorial optimisation An idea which I&amp;rsquo;m of course shamelessly cribbing from the https://adventofcode.com/  .
+Since I have deadlines to hit, I will have to do this economically so I&amp;rsquo;m counting this announcement and creating the outline and initial research as the first day.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

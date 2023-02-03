@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/katex.min.css">
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex.min.js"></script>
+<script type="text/javascript" defer src="https://livingislearning.net/js/katex-auto-render.min.js" onload='renderMathInElement(document.body,{
+                                                              delimiters: [
+  {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+  {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+  {left: "\\begin{align}", right: "\\end{align}", display: true},
+  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+  {left: "$$", right: "$$", display: true},
+  {left: "$", right: "$", display: false},
+  {left: "\\(", right: "\\)", display: false},
+  {left: "\\[", right: "\\]", display: true}
+]
+  });'></script>
+
+
+
+
+  <meta name="generator" content="Hugo 0.92.0-DEV" />
+  
+
+
+<link rel="stylesheet" href="https://livingislearning.net/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://livingislearning.net/css/style.css">
+
+
+
+  
+  
+  <title>Day 4: Linear Programs | Learning is Living</title>
+
+</head>
+
+  <body>
+        <div id="nav-border" class="container">
+  
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/">Home</a>
+    
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/blog">Blog</a>
+    
+  
+  
+  
+  
+  
+  
+    
+    <a class="nav-link" href="https://livingislearning.net/about">More about me</a>
+    
+  
+  
+  
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <div id="breadcrumbs">
+
+
+    <a href="https://livingislearning.net/">Home</a>
+    
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/">Blog</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/">Combinatorial christmas2022</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            / <a href="https://livingislearning.net/blog/combinatorial_christmas2022/4_linear_pograms/">4 linear pograms</a>
+        
+    
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+                
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+    
+
+</div>
+
+      <main id="main">
+       
+
+<h1>Day 4: Linear Programs</h1>
+<p>
+
+
+
+  <p>
+  Authors: Nauka
+  </p>
+
+Started: <time datetime="2022-12-04">2022-12-04</time>
+
+Last Modification: 2022-12-04
+
+, 1407 words, est. reading time: 7 minutes
+
+
+
+
+
+</p>
+<ul>
+<li><a href="#born-from-conflict" id="toc-born-from-conflict">Born from
+conflict</a></li>
+<li><a href="#the-simplex-algorithm" id="toc-the-simplex-algorithm">The
+Simplex algorithm</a>
+<ul>
+<li><a href="#the-simplex-algorithm-nitty-gritty-details"
+id="toc-the-simplex-algorithm-nitty-gritty-details">The Simplex
+algorithm: nitty gritty details</a></li>
+<li><a href="#is-this-efficient" id="toc-is-this-efficient">Is this
+efficient?</a></li>
+</ul></li>
+<li><a href="#interior-points-methods"
+id="toc-interior-points-methods">Interior points methods</a>
+<ul>
+<li><a href="#karmarkars-algorithm-some-details"
+id="toc-karmarkars-algorithm-some-details">Karmarkar’s algorithm : some
+details</a></li>
+</ul></li>
+</ul>
+<p><strong>Edit from the future</strong>: I got covid on day 4 of
+writing this, which means I will move the schedule to “as soon as
+done”.</p>
+<hr />
+<p>Today we do the first deeper dive into technical details of a method.
+And given its ubiquity, I think it’s a good thing to start with the
+lingua franca of combinatorial optimization: Linear programming. This
+post will quickly recap the beginnings and then rush through the two
+main algirithmic templates currently in use:</p>
+<ul>
+<li>Basis exchange/pivoting methods like Dantzigs Simplex method</li>
+<li>Interior Point methods like Karmarkars algorithm or the Ellipsoid
+method</li>
+</ul>
+<p>we will cover <strong>Duality</strong>, another important concept
+<em>tomorrow</em> when we briefly touch on convex optimization in
+general.</p>
+<h1 id="born-from-conflict">Born from conflict</h1>
+<p>Linear programming developed in parallel in both the West and the
+USSR, driven by the needs to solve more and more complexoperations
+problems - hence the name “operations research” for a specific subset of
+optimization theory.</p>
+<p>If you aren’t familiar with the term “Operations” in business and
+other organisational, it refers to the decision making that figures out
+<em>how</em> something can be done, purely based on a goal and the
+surrounding constraints, contrasting with executive decision making
+which is about <em>what</em> should be done.<span class="marginnote">
+For a personal example: I have ADHD. I <em>can</em> focus and run the operations of e.g. writing, but I struggle <em>directing</em> this focus.
+</span>
+
+.
+For Kantorovitch, Dantzig, Koopmans and Hitchcock (the big names dropped
+yesterday), the operations were military and industrial ones: how to
+maximize production of a specific set of goods, how to maximize sales by
+selling in different markets etc.</p>
+<p>The <em>canonical form</em> of writing down these problems has
+become</p>
+<p><span class="math display">\[\begin{align}
+\max\quad c^T&amp;x\\
+\text{s.t.}\quad A&amp;x\leq b\\
+\quad &amp;x\geq 0\\
+c,x\in \mathbb{R}^n,&amp;\quad b\in \mathbb{R}^m,A\in\mathbb{A}^{m\times
+n}
+\end{align}\]</span></p>
+<p>there are also the <em>standard form</em>, <em>augmented form</em>
+(used in the Simplex algorithm) and a few other presentations, but they
+are all equal and can be transformed into another.</p>
+<p>Solving LPs requires one to first find <em>feasible</em> solutions
+(all the points fulfilling the constraints) and then from amongst these,
+find the ones that maximise <span class="math inline">\(c^Tx\)</span>.
+Since without the constraints we might simply set all <span
+class="math inline">\(x_i=\pm\infty\)</span>, it might be intuitive that
+the solutions of the LP will be found at the boundaries of the set the
+constraints box us into - a shape called <em>polytype</em> or
+<em>polyhedron</em>. This intution can be formalized in the language of
+duality (<a href="">see tomorrows post</a>) and is also exploited by the
+<em>Simplex algorithm</em>, Dantzigs famous method for solving LPs.</p>
+<h1 id="the-simplex-algorithm">The Simplex algorithm</h1>
+<p>The Simplex algorithm exploits the fact that when optimising a
+function like <span class="math inline">\(c^Tx\)</span> given a set of
+constraints, we will find the solution at the boundary of the constraint
+set (where we budge against a barrier keeping us from infinity). Every
+boundary point is thus what is referred to as a “basic feasible
+solution”. The question is how to find the <em>best</em> feasible
+solution - or even the first such boundary point.</p>
+<p>Simplex does this by first converting the problem into a <em>Simplex
+tableau</em> which does the following things:
+https://en.wikipedia.org/wiki/Simplex_algorithm</p>
+<ul>
+<li>it converts all lower bounds other than <span
+class="math inline">\(0\)</span> into non-negativity constraints</li>
+<li>it introduces additional non-negative <em>slack variables</em> which
+allow us to rewrite every remaining inequality constraints as
+<em>equalities</em> (the other variables become <em>basic</em>
+variables)</li>
+<li>it eliminates unconstrained variables, either by rewriting or by
+writing the unconstrained variable as <span
+class="math inline">\(x=s_+-s__\)</span> s.t. <span
+class="math inline">\(s_+,s_- \geq 0\)</span> and performing
+substitution</li>
+</ul>
+<p>We can then always find a <em>bfs</em> by setting all <span
+class="math inline">\(x_i=0\)</span> and will then perform the following
+procedure</p>
+<ol type="1">
+<li>while there are still positive coefficients on the basic variables,
+their columns are possible pivot columns. Select one of them
+<span class="marginnote">
+<em><strong>Implementation detail :-D</strong></em>
+</span>
+
+</li>
+<li>Choose a row as the pivot row (corresponding to a basic variable)
+s.t. that all other basic variables remain popsitive TODO:
+explanation</li>
+<li>perform the pivot on the tableau</li>
+<li>Go back to 1.</li>
+</ol>
+<p>This will iteratively visit different vertices until we can no longer
+pivot, which means we have found a solution.</p>
+<h2 id="the-simplex-algorithm-nitty-gritty-details">The Simplex
+algorithm: nitty gritty details</h2>
+<h2 id="is-this-efficient">Is this efficient?</h2>
+<p>The answer to this is surprisingly ambiguous: <em>in general</em> and
+<em>in the real world</em>, a well crafted Simplex implementation (with
+apropriate pivot rules etc.) runs very efficiently and can scale to
+thousands of variables. <em>BUT</em>, you can prove (withe <a
+href="https://en.wikipedia.org/wiki/Klee%E2%80%93Minty_cube">Klee-Minty
+cube</a>) that it’s worst case efficiency is exponential in the
+dimension you are working in.</p>
+<p><em>How much does this matter</em>? Well, that’s an executive
+decision. What matters for <em>us</em> as researchers who want to
+understand this apparent contradiction (bad worst case behaviour, good
+real world behaviour) it serves as evidence that the real world has some
+<em>additional</em> structure which the Klee-Minty cube lacks and which
+is favourable to the Simplex algorithm by chance.</p>
+<h1 id="interior-points-methods">Interior points methods</h1>
+<p>However, you might not want to rely on this hidden structure to
+always be there. And as a researcher, well, you want proofs of
+efficiency! <a
+href="https://en.wikipedia.org/wiki/Ellipsoid_method">Leonid
+Khachiyan</a> devised a method which gives you these guarantees (the
+Ellipsoid method), which <em>provably</em> has a worst case runtime of
+<span class="math inline">\(\mathcal{O}(n^2L)poly(n,m,L)\)</span>. Here
+<span class="math inline">\(\mathcal{O}(n^2L)\)</span> is the number of
+iterations of the algorithm and <span
+class="math inline">\(poly(n,m,L)\)</span> means we need to solve a
+subproblem with polynomial complexity depending on <span
+class="math inline">\(n,m,L\)</span> (e.g., imagine the iterations takes
+time proportional to <span
+class="math inline">\(\mathcal{O}(n^4)\)</span>, then the total
+complexity would be <span
+class="math inline">\(\mathcal{O}(n^6)\)</span> ). <span
+class="math inline">\(L\)</span> here is the number of bits you need to
+represent <span class="math inline">\(x\)</span>, which captures a bunch
+of possible structures of the input domain (e.g. if you only care about
+a small range with a specific distribution, <span
+class="math inline">\(L\)</span> will shrink), but also avoids cheating
+by encoding constraints and dimensions into special values in an attempt
+to shrink <span class="math inline">\(n\)</span> or <span
+class="math inline">\(m\)</span>. The dependence on <span
+class="math inline">\(L\)</span> will generally be a fixed <span
+class="math inline">\(L^2\)</span>.</p>
+<p>We won’t go into details on the Ellipsoid method
+<span class="marginnote">
+([Prof. Arora got you covered though]https://www.cs.princeton.edu/courses/archive/fall05/cos521/ellipsoid.pdf)
+</span>
+
+ because while a big <em>theoretical</em>
+breakthrough and ushered in a whole , the ellipsoid is almost never used
+in practice due to numerical instability (the rate at which small errors
+accumulate).</p>
+<p>Instead, <a
+href="https://en.wikipedia.org/wiki/Karmarkar%27s_algorithm">Narendra
+Karmarkar’s algorithm</a> <span class="citation"
+data-cites="karmarkarNewPolynomialtimeAlgorithm1984">[@karmarkarNewPolynomialtimeAlgorithm1984]</span>
+not only has a (provable) worst case complexity of <span
+class="math inline">\(\mathcal{O}(n^{3.5}L^2)\)</span> instead of the
+original ellipsoid methods <span
+class="math inline">\(\mathcal{O}(n^{6}L^2)\)</span>, it’s also actually
+amenable to be implemented efficiently and numerically stable. Karmarkar
+notes</p>
+<blockquote>
+<p>In the ellipsoid algorithm, the round-off errors in numerical
+computation accumulate from step to step. The amount of precision
+required in arithmetic onerations ~rows with the number of steps. In our
+algorithm, errors do not accumulate. On the contrary, the algorithm is
+self-correcting in the sense that the round-off error made in one step
+gets compensated for by future steps. If we allow <span
+class="math inline">\(\epsilon\)</span> error in computation of the
+vector <span class="math inline">\(x^(k)\)</span> in each step, we can
+compensate for the errors by running the algorithm <span
+class="math inline">\(2\epsilon\)</span> steps.</p>
+</blockquote>
+<p>The basic idea is that instead of staying on the boundaries of the
+polytope like in simplex, we construct a sphere around our current
+iterate which is guaranteed to only contain points in the feasible set,
+then select the best point within this sphere. To see the cleverness of
+this, you should appreciate the following facts:</p>
+<ol type="1">
+<li>We can “easily” solve homogeneous linear <em>equalities</em> of the
+shape <span class="math inline">\(Ax=0\)</span> as long as <span
+class="math inline">\(A^{-1}\)</span> exsts because we don’t have
+inequality constraints to deal with</li>
+<li>We can map optimization on a sphere into this by adding an
+<em>equality</em> constraint s.t. <span
+class="math inline">\(\sum_{i=1}^n x_i=0\)</span>, which we can do by
+simply adding a row of ones to <span
+class="math inline">\(A\)</span>.</li>
+<li>It is easy to find the radius of a sphere which will stay within a
+<em>simplex</em> (a special <a href="">polytope</a>) using the formula
+<span class="math inline">\(r=\frac{1}{\sqrt{n(n-1)}}\)</span> since we
+are dealing with a high dimensional generalisation of the eqilateral
+triangle.</li>
+<li>It is possible (as presented in the paper) to map the constraint
+polytype onto a Simplex centered around the current point that ensures a
+point within the Simplex is also a feasible point</li>
+</ol>
+<p>Which leads us to the (surprisingly simple!) algorithm of</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> karmarkars_algorithm(x,A,c,alpha):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> c.dot(x)<span class="op">&gt;</span>alpha:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    T,T_invert<span class="op">=</span> find_transformation(x,A) <span class="co"># </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    x_simplex<span class="op">=</span>T(x)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    c_simplex<span class="op">=</span>T(c)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    A_sphere<span class="op">=</span>transform_and_augment(T,A)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    x_simplex<span class="op">=</span>solve_for_new_x(A_simplex,c_simplex) <span class="co"># n^3 or n^2.5 complexity, most expensive operation here</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>T_invert(x_simplex)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
+<p>where the pseudo-python actually doesn’t hide that much(see
+below).</p>
+<h2 id="karmarkars-algorithm-some-details">Karmarkar’s algorithm : some
+details</h2>
+<hr />
+<p>And that’s it for today. Tomorrow we will dig a bit deeper on
+<em>why</em> both the Simplex and the IP method look for solutions at
+the boundaries and what this means when we think <em>in general</em>
+about solving problems with constraints - in other words “What the hell
+are primal and dual problems”?</p>
+<p>See you tomorrow. And Слава Україні!</p>
+
+
+
+      </main>
+    <footer>
+      
+
+      <footer>
+  
+
+</footer>
+
+
+    </footer>
+    </div>
+  </body>
+</html>
