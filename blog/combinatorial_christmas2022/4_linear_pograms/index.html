@@ -285,7 +285,7 @@ Started: <time datetime="2022-12-04">2022-12-04</time>
 
 Last Modification: 2022-12-04
 
-, 1407 words, est. reading time: 7 minutes
+, 1451 words, est. reading time: 7 minutes
 
 
 
@@ -377,9 +377,9 @@ set (where we budge against a barrier keeping us from infinity). Every
 boundary point is thus what is referred to as a “basic feasible
 solution”. The question is how to find the <em>best</em> feasible
 solution - or even the first such boundary point.</p>
-<p>Simplex does this by first converting the problem into a <em>Simplex
-tableau</em> which does the following things:
-https://en.wikipedia.org/wiki/Simplex_algorithm</p>
+<p>Simplex does this by first converting the problem into a <a
+href="https://en.wikipedia.org/wiki/Simplex_algorithm">Simplex
+tableau</a> which does the following things:</p>
 <ul>
 <li>it converts all lower bounds other than <span
 class="math inline">\(0\)</span> into non-negativity constraints</li>
@@ -405,8 +405,7 @@ their columns are possible pivot columns. Select one of them
 
 </li>
 <li>Choose a row as the pivot row (corresponding to a basic variable)
-s.t. that all other basic variables remain popsitive TODO:
-explanation</li>
+s.t. that all other basic variables remain positive</li>
 <li>perform the pivot on the tableau</li>
 <li>Go back to 1.</li>
 </ol>
@@ -457,7 +456,7 @@ class="math inline">\(L\)</span> will generally be a fixed <span
 class="math inline">\(L^2\)</span>.</p>
 <p>We won’t go into details on the Ellipsoid method
 <span class="marginnote">
-([Prof. Arora got you covered though]https://www.cs.princeton.edu/courses/archive/fall05/cos521/ellipsoid.pdf)
+<a href="https://www.cs.princeton.edu/courses/archive/fall05/cos521/ellipsoid.pdf">Prof. Arora got you covered though</a>
 </span>
 
  because while a big <em>theoretical</em>
@@ -467,8 +466,10 @@ accumulate).</p>
 <p>Instead, <a
 href="https://en.wikipedia.org/wiki/Karmarkar%27s_algorithm">Narendra
 Karmarkar’s algorithm</a> <span class="citation"
-data-cites="karmarkarNewPolynomialtimeAlgorithm1984">[@karmarkarNewPolynomialtimeAlgorithm1984]</span>
-not only has a (provable) worst case complexity of <span
+data-cites="karmarkarNewPolynomialtimeAlgorithm1984">(<a
+href="#ref-karmarkarNewPolynomialtimeAlgorithm1984"
+role="doc-biblioref">Karmarkar 1984</a>)</span> not only has a
+(provable) worst case complexity of <span
 class="math inline">\(\mathcal{O}(n^{3.5}L^2)\)</span> instead of the
 original ellipsoid methods <span
 class="math inline">\(\mathcal{O}(n^{6}L^2)\)</span>, it’s also actually
@@ -522,8 +523,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>T_invert(x_simplex)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
-<p>where the pseudo-python actually doesn’t hide that much(see
-below).</p>
+<p>where the pseudo-python actually doesn’t hide that much mathematical
+detail (which I might add to this post once I have time).</p>
 <h2 id="karmarkars-algorithm-some-details">Karmarkar’s algorithm : some
 details</h2>
 <hr />
@@ -533,6 +534,18 @@ the boundaries and what this means when we think <em>in general</em>
 about solving problems with constraints - in other words “What the hell
 are primal and dual problems”?</p>
 <p>See you tomorrow. And Слава Україні!</p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-karmarkarNewPolynomialtimeAlgorithm1984" class="csl-entry"
+role="doc-biblioentry">
+Karmarkar, N. 1984. <span>“A New Polynomial-Time Algorithm for Linear
+Programming.”</span> In <em>Proceedings of the Sixteenth Annual
+<span>ACM</span> Symposium on <span>Theory</span> of Computing</em>,
+302–11. <span>STOC</span> ’84. <span>New York, NY, USA</span>:
+<span>Association for Computing Machinery</span>. <a
+href="https://doi.org/10.1145/800057.808695">https://doi.org/10.1145/800057.808695</a>.
+</div>
+</div>
 
 
 
