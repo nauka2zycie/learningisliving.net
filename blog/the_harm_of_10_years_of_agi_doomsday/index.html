@@ -236,7 +236,7 @@ Started: <time datetime="2023-04-02">2023-04-02</time>
 
 Last Modification: 2023-04-02
 
-, 4377 words, est. reading time: 21 minutes
+, 4634 words, est. reading time: 22 minutes
 
 
 
@@ -391,17 +391,20 @@ href="https://en.wikipedia.org/wiki/Great_Awakening">had</a> a <a
 href="https://en.wikipedia.org/wiki/C/2010_X1">bunch</a> of <a
 href="https://en.wikipedia.org/wiki/2012_phenomenon">end of the
 world</a> scares, partially motivated by <a
-href="https://en.wikipedia.org/wiki/Technostress">technostress</a>.
-Given this, the idea of a big, end of the world scenario is a very good
-way to collect funding <em>and</em> a dangerous cognitive trap to fall
-into. As I said, I unironically think it’s a good thing a professional
-paranoiac like Bostrom exists, but if mixed with billionares money and a
-fan-of-AI like Yudkowsky, the mix is an AGI doomsday cult, where we need
-to find the right incantation to seal Satan away before all is too late
-- and in the histeria this induces, the question of what happens if AGI
-<em>isn’t</em> the end of the world is assumed to be a utopia, since
-there is only the binary - we find the incantation there will be utopia,
-otherwise extinction.</p>
+href="https://en.wikipedia.org/wiki/Technostress">technostress</a>. If
+the world is scary, uncertain and you don’t know how things will go,
+boiling things down to a binary helps cope with that complexity. The end
+of the world can be a very comforting idea.</p>
+<p>Given this, the idea of a big, end of the world scenario is a very
+good way to collect funding <em>and</em> a dangerous cognitive trap to
+fall into. As I said, I unironically think it’s a good thing a
+professional paranoiac like Bostrom exists, but if mixed with
+billionares money and a fan-of-AI like Yudkowsky, the mix is an AGI
+doomsday cult, where we need to find the right incantation to seal Satan
+away before all is too late - and in the histeria this induces, the
+question of what happens if AGI <em>isn’t</em> the end of the world is
+assumed to be a utopia, since there is only the binary - we find the
+incantation there will be utopia, otherwise extinction.</p>
 <p>In a mode like this, there is no room for AGI or AI being easy to
 control, but that control being abused, or questions of politics and
 balance of power between stakeholders - there is only “humanity” and
@@ -449,8 +452,8 @@ href="https://epochai.org/blog/will-we-run-out-of-ml-data-evidence-from-projecti
 out of training data</a> in form of text and images soon, next up are
 audio and video, but then that is kinda it - no more nicely structured
 input to memorize and autocomplete…</li>
-<li>and that is all these language models do, as evidences by e.g. the
-glitch token line of investigations, <a
+<li>and <a href="that">that</a> is all these language models do, as
+evidences by e.g. the glitch token line of investigations, <a
 href="https://evanthebouncy.medium.com/llm-self-play-on-20-questions-dee7a8c63377">the
 horrible performance</a> of GPT3.5 on 20 questions and - well, any
 critical interaction with the system. They memorize the training set as
@@ -466,24 +469,30 @@ you can steer this to be useful by giving inputs <em>you know</em> will
 be likely to yield useful autocompletes, but that’s like setting up a
 bunch of dominoes so they will spell out “Fish” when tipped over - if
 you claim <em>the dominoes</em> or <em>gravity</em> wrote the word, you
-are misattributing</li>
+are misattributing<a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a></li>
 <li>In order to develop a self loop, you need <em>state</em>, which is
 the one thing the transformer architecture tried to do away with because
 you need to be stateless for parallelized training</li>
 <li>even if you had the capability for a state loop, you would need to
-train the model in a way which induces causal reasoning, something which
-I am increasingly convinced requires an inductive bias towards a “self”,
-since you need to do intervention experiments to unravel causality
-properly and that becomes easier if you know what “you” <em>is</em></li>
-<li>but even if you put all of this into an ML system, you need to still
-train it in an online fashion then - you can’t <em>easily</em>
-parallelize interactions with the real world, you need to keep track of
-the off-policy bias and training becomes unstable easily - and the whole
-apparatus LLMs relies on large batch, <em>very careful</em> training in
-order to not become unstable</li>
+train the model in a way which induces <a
+href="https://arxiv.org/abs/1801.04016">causal reasoning</a>, something
+which I am increasingly convinced requires an inductive bias towards a
+“self”. This is simply because having a notion of self makes it easier
+to learn which part of the intervention was <em>you</em> and which part
+was the causal consequence</li>
+<li>but even if you put all of this into an ML system, you then need to
+train it in an online fashion - i.e. one step at a time, as you are
+doing things. You can’t easily parallelize interactions with the real
+world, you need to keep track of the <a
+href="https://arxiv.org/pdf/1802.01561.pdf">off-policy bias</a> and
+training becomes unstable easily - and the whole apparatus LLMs relies
+on large batch, <em>very careful</em> training in order to not become
+unstable</li>
 <li>finally, even if you handled all of this, the sample complexity of
 learning things in nonstationary environment via reinforcement learning
-scales <em>very</em> unfavorably</li>
+scales <em>very</em> unfavorably<a href="#fn7" class="footnote-ref"
+id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
 </ol>
 <p>Now, FOOM-AGI riskers will swat away all of these with “but that’s no
 proof that it’s impossible”, to which I answer “you have no proof that I
@@ -493,14 +502,20 @@ core logical fallacies of their idea construct namely</p>
 <ul>
 <li><a
 href="https://en.wikipedia.org/wiki/God_of_the_gaps#Usage_in_referring_to_a_type_of_argument">god
-of the gaps</a> aka argument from ignorance</li>
+of the gaps</a> aka argument from ignorance, i.e. “you can’t prove AGI
+is impossible or safe, therefore it’s inevitable and unsafe”<a
+href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></li>
 <li><a href="https://en.wikipedia.org/wiki/Pascal%27s_mugging">Pascals
 mugging</a> a.k.a. “don’t use probability theory in an open world
-setting”</li>
+setting”. If you try to reason about something using probabilities with
+no grounding of it’s impact nor it’s probability, you can just make up
+whatever impact and probability your predisposed conclusion needs and go
+with it</li>
 </ul>
-<p>and has perfected a frame of discourse in which the burden of proof
-is not <em>on them</em> to argue that AGI is actually coming and it’s a
-big risk, but on <em>you</em> for arguing why we can take the chance,
+<p>The frame of discourse is now one in which the burden of proof is not
+<em>on them</em> to argue that AGI is actually coming and it’s a big
+risk, but on <em>you</em> for arguing why we can take the chance,
 however slim at AI Satan emerging.</p>
 <p><em>That’s</em> why I brought in the AI Satan earlier and why I call
 this subset a doomsday cult, because it is a belief system which induces
@@ -540,28 +555,30 @@ the thing just failed to learn your task.</li>
 <li>language models can be goaded into competing sequences according to
 a pattern you give to them, e.g. if you count “1 2 fish 4 5 fish 7 8
 fish” it has a decent chance of continuing the sequence “10 11 fish”
-etc. This makes sense, since they are trained to sample from <span
+etc.</li>
+<li>This makes sense, since they are trained to sample from <span
 class="math inline">\(p(x_{t+1}|x_{t},\dots,x_1)\)</span>. However, this
-has been termed “in context learning” (a redefinition of the learning
-term since no parameters are updated) and the community is now
-discussing “simulator theory”, “the wa-luigi effect” and a whole bunch
-of other new-speak because they are set on these models being more
-powerful than just a language autocomplete with some text snippets
-memorized, so instead of the (actually very nice!) insight “polite
-people are always polite, rude people are sometimes polite” being used
-to frame things in terms of conditional probabilities (e.g. thinking on
-how to frame prompts such that <em>in your dataset</em> the prompt would
-come from reasonable discourse) they talk about it in terms of
-“summoning the simulacra” of an evil persona - which is an incredibly
-dramatic way to express “the model has associates input which is
-sometimes rude as having high probability of rude output”.</li>
+has now been termed “in context learning” (a redefinition of the
+learning term since no parameters are updated) and the community is now
+similarly discussing “simulator theory”, “the wa-luigi effect” and a
+whole bunch of other new-speak. All because they are set on these models
+being more powerful than just a language autocomplete with some text
+snippets memorized. The (actually very nice!) insight “polite people are
+always polite, rude people are sometimes polite” could used to frame
+things in terms of conditional probabilities - e.g. thinking on how to
+frame prompts such that <em>in your dataset</em> the prompt would come
+from reasonable discourse.</li>
+<li>Instead they talk about it in terms of “summoning the simulacra” of
+an evil persona - which is an incredibly dramatic way to express “the
+model has associates input which is sometimes rude as having high
+probability of rude output”.</li>
 </ul>
 <p>It’s a generation of AI enthusiasts which has self-indoctrinated
 themselves to look for the AGI in systems which, taken soberly <em>do
-not exhibit it</em> and this sloppy discourse has not started to <a
+not exhibit it</em> and this sloppy discourse has now started to <a
 href="https://arxiv.org/abs/2303.12712">affect even researchers I
-respect immensely</a><a href="#fn6" class="footnote-ref" id="fnref6"
-role="doc-noteref"><sup>6</sup></a>.</p>
+respect immensely</a> <a href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a>.</p>
 <p><a
 href="http://proceedings.mlr.press/v119/yehuda20a/yehuda20a.pdf">It is
 impossible to train an algorithm to solve NP-hard problems</a> with
@@ -594,15 +611,15 @@ during the crypto wars already.</strong></p>
 <p>Now, with this background, let’s get back to LAION and the CERN of
 AI.</p>
 <p>Keep in mind we are already in a world where OpenAI, Conjecture etc.
-exist, all for profit companies<a href="#fn7" class="footnote-ref"
-id="fnref7" role="doc-noteref"><sup>7</sup></a>. What also exists:
+exist, all for profit companies<a href="#fn10" class="footnote-ref"
+id="fnref10" role="doc-noteref"><sup>10</sup></a>. What also exists:
 Pangu, a trillion parameter Chinese state LLM and Russia, currently
 rogue state invading Ukraine and a whole slew of other proprietary tech
 companies using AI systems for state and corporate control.</p>
 <p>Who would argue against the existence of a public institution that
 freely shares models, data and know-how in an effort to commodify and
-really democratize<a href="#fn8" class="footnote-ref" id="fnref8"
-role="doc-noteref"><sup>8</sup></a> AI access? Notably, an institution
+really democratize<a href="#fn11" class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a> AI access? Notably, an institution
 that calls for AI safety to be a first principle and which would
 actually develop <em>open</em> AI so people can actually check and not
 rely on “trust us bros, we asked our friends at this other Nonprofit and
@@ -623,10 +640,10 @@ balance of power, most importantly that between <em>labor</em> and
 to democracy, the only avenue we have is to commodify AI models as
 quickly as possible, to minimize the comparative advantage between small
 companies and individuals and billionaires with hundred of GPUs.
-Otherwise, those already in power<a href="#fn9" class="footnote-ref"
-id="fnref9" role="doc-noteref"><sup>9</sup></a> hoover up the efficiency
-gains of this new tech, except that unions won’t have any leverage any
-more to distribute the wages <a
+Otherwise, those already in power<a href="#fn12" class="footnote-ref"
+id="fnref12" role="doc-noteref"><sup>12</sup></a> hoover up the
+efficiency gains of this new tech, except that unions won’t have any
+leverage any more to distribute the wages <a
 href="https://doi.org/10.1111/kykl.12128">like they did previously</a>
 and they will have staggeringly more powerful surveillance and protest
 busting capabilities.</p>
@@ -657,8 +674,8 @@ uses “the waluigi effect” as a term…</p>
 <p>That is to say, I consider the argument valid and <em>for some
 reason</em>, nerds like me who derive a good chunk of our self worth
 from what is called “intelligence” tend to overestimate how much power
-“intelligence” gives you<a href="#fn10" class="footnote-ref"
-id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+“intelligence” gives you<a href="#fn13" class="footnote-ref"
+id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
 <p>Reason three is that without public access to the models, we can’t
 find the failure modes and we will go back to redlining. <a
 href="https://www.lighthousereports.com/suspicion-machines-methodology/">The
@@ -700,8 +717,8 @@ defenses against SQL injection or buffer overflows).</p>
 <p>Having only states, the rich and the bad guys who side step states
 have access to powerful tools robs us of our ability to defend ourselves
 and maintain a democracy in which the people are truly sovereign.<a
-href="#fn11" class="footnote-ref" id="fnref11"
-role="doc-noteref"><sup>11</sup></a></p>
+href="#fn14" class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a></p>
 <p>Even <em>if</em> we are talking about AI and AGI tools. And that’s
 why you should sign <a href="https://laion.ai/blog/petition/">LAIONs
 petition</a>.</p>
@@ -734,28 +751,54 @@ href="https://imgur.com/a/gWeIK6c">other people in the milieu</a> (for
 more on Siskind see e.g. <a
 href="https://www.eruditorumpress.com/blog/the-beigeness-or-how-to-kill-people-with-bad-writing-the-scott-alexander-method">here</a>)<a
 href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Although it needs to be said that this is a Microsoft
-research paper and Microsoft of course has an interest in hyping LLMs
-due to their investment in OpenAI<a href="#fnref6" class="footnote-back"
+<li id="fn6"><p>For what it’s worth, I think another bad inductive bias
+is the way token mixing is currently implemented in sequence models - at
+least as best as I can tell, human thinking isn’t sequential, even if it
+sometimes feels like it, we rerun things we read and hear immediately
+through a graph of associations closer to a <a
+href="https://en.wikipedia.org/wiki/Rhizome_(philosophy)">rhizome</a>
+and use anti-causal information flow, while in a transformer, every
+token produced only possesses information from the past<a href="#fnref6"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>If <span class="math inline">\(s,a\)</span> and <span
+class="math inline">\(h\)</span> are your state space size, action space
+size and time horizon respectively, the best bounds I know are <a
+href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9719704">either</a>
+<span class="math inline">\(\mathcal{O}(sa)^{\mathcal{O}(s)}\)</span>
+(independent of <span class="math inline">\(h\)</span> but when you see
+<span class="math inline">\(s^s\)</span> you know you are in for a bad
+time) or <a href="https://arxiv.org/abs/2204.05275">something like</a>
+<span class="math inline">\(\mathcal{O}(h^4s)\)</span> with a bad
+dependence on your discount factor (<span
+class="math inline">\(\gamma^{-3}\)</span>).<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Mixed with the ever popular tropes of extrapolating the
+rising part of a sigmoid and boldly claiming that <a
+href="https://www.nber.org/system/files/working_papers/w13882/w13882.pdf">this
+time is different</a><a href="#fnref8" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Yes, I count OpenAI. See first footnote.<a
-href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>In the “equal access for everyone”, not in the “if you
+<li id="fn9"><p>Although it needs to be said that this is a Microsoft
+research paper and Microsoft of course has an interest in hyping LLMs
+due to their investment in OpenAI<a href="#fnref9" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Yes, I count OpenAI. See first footnote.<a
+href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>In the “equal access for everyone”, not in the “if you
 can pay for it you can come” British “public” school way<a
-href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Out of an abundance of caution, <a
+href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>Out of an abundance of caution, <a
 href="https://en.wikipedia.org/wiki/Antisemitism#Conspiracy_theories">no,
 not these</a>, piss of, <a
 href="https://en.wikipedia.org/wiki/Old_money">these</a>, <a
 href="https://en.wikipedia.org/wiki/New_money">these</a> and <a
-href="https://en.wikipedia.org/wiki/Royalty">these</a><a href="#fnref9"
+href="https://en.wikipedia.org/wiki/Royalty">these</a><a href="#fnref12"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>Joining a long lineage of nerds stretching back to
+<li id="fn13"><p>Joining a long lineage of nerds stretching back to
 plato who argue that in a perfect society, <em>smart people</em> should
 hold all power. For some reason, the question why Donald Trump got
 elected if intelligence is so dangerous doesn’t seem to come up much.<a
-href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>You might want to talk about handguns, mass shootings
+href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>You might want to talk about handguns, mass shootings
 etc. and to this I say: Switzerland has similar gun laws to the US, but
 much less shootings. If your society treats its constituents better,
 them having power is not a risk. You might also talk about the risk of
@@ -763,7 +806,7 @@ rogue states and nuclear weapons, and to this I say a) good thing we are
 talking about a CERN for AI and a vending machine for weapons grade
 uranium, check the 2nd section and b) while I still think nuclear
 disarmament would be good, I also think that if Ukraine hadn’t disarmed
-they probably wouldn’t have been invaded last year<a href="#fnref11"
+they probably wouldn’t have been invaded last year<a href="#fnref14"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
