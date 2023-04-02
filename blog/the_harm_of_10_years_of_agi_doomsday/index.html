@@ -236,7 +236,7 @@ Started: <time datetime="2023-04-02">2023-04-02</time>
 
 Last Modification: 2023-04-02
 
-, 4634 words, est. reading time: 22 minutes
+, 4717 words, est. reading time: 23 minutes
 
 
 
@@ -770,8 +770,24 @@ href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9719704">eith
 time) or <a href="https://arxiv.org/abs/2204.05275">something like</a>
 <span class="math inline">\(\mathcal{O}(h^4s)\)</span> with a bad
 dependence on your discount factor (<span
-class="math inline">\(\gamma^{-3}\)</span>).<a href="#fnref7"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+class="math inline">\(\gamma^{-3}\)</span>). For off-policy methods <a
+href="https://arxiv.org/abs/2208.03247v2">the critical parameter looks a
+bit different</a>, namely the effective horizon <span
+class="math inline">\(e=(1-\gamma)^{-1}\)</span> appears as <span
+class="math inline">\(e^7\)</span>, meaning going from <span
+class="math inline">\(\gamma=0.8\)</span> (decays to <span
+class="math inline">\(\approx 0.01\)</span> in 20 steps) to <span
+class="math inline">\(\gamma=0.9\)</span> (<span
+class="math inline">\(\approx 0.13\)</span> after 20 steps, 42 steps to
+<span class="math inline">\(\approx 0.01\)</span>) increases the factor
+contributed <em>just</em> by this from <span
+class="math inline">\(78e3\)</span> to <span
+class="math inline">\(10e6\)</span>, a <span
+class="math inline">\(128x\)</span> increase. Long horizon planning
+(say, 100 steps in the future still matter, for which we need <span
+class="math inline">\(\gamma\geq\approx 0.99895\)</span>) would increase
+the number of samples by 15 <em>orders of magnitude</em><a
+href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Mixed with the ever popular tropes of extrapolating the
 rising part of a sigmoid and boldly claiming that <a
 href="https://www.nber.org/system/files/working_papers/w13882/w13882.pdf">this
